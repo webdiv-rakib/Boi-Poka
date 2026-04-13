@@ -13,15 +13,18 @@ const Book = ({ singleBook }) => {
             </figure>
             <div className="card-body">
                 <div className="card-actions">
-                    <div className="badge badge-outline">{tags[0]}</div>
-                    <div className="badge badge-outline">{tags[1]}</div>
+                    <div className="badge bg-base-200 p-4 text-green-400 font-bold">{tags[0]}</div>
+                    <div className="badge bg-base-200 p-4 text-green-400 font-bold">{tags[1]}</div>
                 </div>
-                <h2 className="card-title">
-                    Card Title
-                    <div className="badge badge-secondary">NEW</div>
+                <h2 className="card-title font-bold text-3xl">
+                    {bookName}
                 </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-
+                <p className='font-bold'>By: {author}</p>
+                <hr className='border-dashed' />
+                <div className='flex justify-between'>
+                    <p>Fiction</p>
+                    <p className='text-right'>{rating}</p>
+                </div>
             </div>
         </div>
     );
