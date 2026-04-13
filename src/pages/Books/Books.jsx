@@ -8,7 +8,7 @@ const Books = () => {
             .then(data => setAllBooks(data))
     }, [])
     return (
-        <div>
+        <div className='bg-base-200'>
             <h1 className='text-center text-4xl'>Books</h1>
         </div>
     );

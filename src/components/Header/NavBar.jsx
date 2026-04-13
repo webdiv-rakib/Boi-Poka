@@ -26,8 +26,8 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end md:flex md:gap-2">
-                <button className="btn">Sign In</button>
-                <button className="btn">Sign Up</button>
+                <button className="btn bg-green-400 text-white">Sign In</button>
+                <button className="btn bg-[#59c6d2] text-white">Sign Up</button>
             </div>
         </div>
         // <div className="navbar bg-base-100">
