@@ -3,7 +3,7 @@ import bookimage from '../../assets/books-removebg-preview.png'
 const Banner = () => {
     return (
         <div className="hero bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse md:mt-10 md:mb-10">
+            <div className="hero-content flex-col lg:flex-row-reverse md:mt-10 md:mb-20">
                 <img
                     src={bookimage}
                     className="rounded-lg shadow-2xl"
