@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router";
-import { addToStoreDB } from "../../utilities/addToDB";
+import { addToStoreDB, addToWishDB } from "../../utilities/addToDB";
 
 const BookDetails = () => {
     const { id } = useParams();
@@ -16,6 +16,10 @@ const BookDetails = () => {
         // if book already exist then show a alert
         // if book not exist then push in the collection or array
         addToStoreDB(id)
+    }
+
+    const handleWishList = id => {
+        addToWishDB(id)
     }
     return (
         <div className="flex items-center justify-center mt-10 mb-10">
@@ -44,8 +48,8 @@ const BookDetails = () => {
                         <p>Rating: {rating}</p>
                     </div>
                     <div className="card-actions">
-                        <button className="btn btn-primary" onClick={()=>handleMarkAsRead(id)}>Mark As Read</button>
-                        <button className="btn btn-primary">Add To Wishlist</button>
+                        <button className="btn btn-primary" onClick={() => handleMarkAsRead(id)}>Mark As Read</button>
+                        <button className="btn btn-primary" onClick={() => handleWishList(id)}>Add To Wishlist</button>
                     </div>
                 </div>
             </div>

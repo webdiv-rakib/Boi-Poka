@@ -2,17 +2,25 @@ import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { getStoredBook } from '../../utilities/addToDB';
+import { getStoredBook, getWishListBook } from '../../utilities/addToDB';
 import Book from '../Book/Book';
 const ReadList = () => {
     const data = useLoaderData();
 
     const [readList, setReadList] = useState([]);
+    const [wishList, setWishList] = useState([]);
     useEffect(() => {
         const storedBookData = getStoredBook();
         const convertedStoredBook = storedBookData.map(id => parseInt(id));
         const myReadList = data.filter(book => convertedStoredBook.includes(book.bookId));
         setReadList(myReadList)
+    }, []);
+
+    useEffect(() => {
+        const storedWishListData = getWishListBook();
+        const convertWishListBook = storedWishListData.map(id => parseInt(id));
+        const myWishList = data.filter(book => convertWishListBook.includes(book.bookId));
+        setWishList(myWishList);
     }, [])
 
     return (
@@ -33,12 +41,17 @@ const ReadList = () => {
                         <h2>Book i read :{readList.length}</h2>
                         <div className='grid grid-cols-4 justify-self-center gap-10 mb-10'>
                             {
-                            readList.map(b => <Book key={b.bookId} singleBook={b}></Book>)
-                        }
+                                readList.map(b => <Book key={b.bookId} singleBook={b}></Book>)
+                            }
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                        <h2>Wish listed Books: {wishList.length}</h2>
+                        <div className='grid grid-cols-4 justify-self-center gap-10 mb-10'>
+                            {
+                                wishList.map(b => <Book key={b.bookId} singleBook={b}></Book>)
+                            }
+                        </div>
                     </TabPanel>
                 </Tabs>
             </div>

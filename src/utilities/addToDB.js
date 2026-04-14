@@ -21,3 +21,28 @@ const addToStoreDB = (id) => {
 }
 
 export { addToStoreDB, getStoredBook }
+
+const getWishListBook = () => {
+    const wishListBooksSTR = localStorage.getItem('wishList');
+    if (wishListBooksSTR) {
+        const wishListBookData = JSON.parse(wishListBooksSTR);
+        return wishListBookData;
+    }
+    else {
+        return []
+    }
+}
+
+const addToWishDB = (id) => {
+    const wishListBookData = getWishListBook();
+    if (wishListBookData.includes(id)) {
+        alert('Already Exist')
+    }
+    else {
+        wishListBookData.push(id)
+        const data = JSON.stringify(wishListBookData);
+        localStorage.setItem('wishList', data);
+    }
+}
+
+export { getWishListBook, addToWishDB };
