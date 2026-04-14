@@ -1,3 +1,8 @@
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
+
 const getStoredBook = () => {
     const storedBookSTR = localStorage.getItem('readList')
     if (storedBookSTR) {
@@ -11,7 +16,11 @@ const getStoredBook = () => {
 const addToStoreDB = (id) => {
     const storedBookData = getStoredBook();
     if (storedBookData.includes(id)) {
-        alert('Already exist')
+        MySwal.fire({
+            title: "Good job!",
+            text: "You clicked the button!",
+            icon: "success"
+        });
     }
     else {
         storedBookData.push(id)
@@ -36,7 +45,11 @@ const getWishListBook = () => {
 const addToWishDB = (id) => {
     const wishListBookData = getWishListBook();
     if (wishListBookData.includes(id)) {
-        alert('Already Exist')
+        MySwal.fire({
+            title: "Good job!",
+            text: "You clicked the button!",
+            icon: "success"
+        });
     }
     else {
         wishListBookData.push(id)

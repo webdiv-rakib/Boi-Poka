@@ -7,6 +7,8 @@ const BookDetails = () => {
     const data = useLoaderData();
     const singleBook = data.find(book => book.bookId === bookId);
 
+
+
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = singleBook;
 
     const handleMarkAsRead = id => {
@@ -15,6 +17,7 @@ const BookDetails = () => {
         // array or collection
         // if book already exist then show a alert
         // if book not exist then push in the collection or array
+
         addToStoreDB(id)
     }
 
@@ -22,15 +25,15 @@ const BookDetails = () => {
         addToWishDB(id)
     }
     return (
-        <div className="flex items-center justify-center mt-10 mb-10">
-            <div className="card card-side bg-base-100 shadow-sm w-1/2">
+        <div className="md:flex md:items-center md:justify-center md:mt-10 md:mb-10">
+            <div className="card card-side bg-base-100 shadow-sm md:w-1/2 flex flex-col md:flex-row p-5">
                 <figure>
                     <img
-                        className="w-100"
+                        className="md:w-100"
                         src={image}
                         alt="Movie" />
                 </figure>
-                <div className="card-body w-1/2">
+                <div className="card-body md:w-1/2">
                     <div>
                         <h2 className="card-title text-4xl">{bookName}</h2>
                         <h2 className="">By: {author}</h2>
