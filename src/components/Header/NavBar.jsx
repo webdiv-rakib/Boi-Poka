@@ -21,7 +21,7 @@ const NavBar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-5">
-                    <NavLink><span className="md:btn">Home</span></NavLink>
+                    <NavLink to='/'><span className="md:btn">Home</span></NavLink>
                     <NavLink><span className="md:btn">Listed Books</span></NavLink>
                     <NavLink><span className="md:btn">Pages to Read</span></NavLink>
                     <NavLink to='/about'><span className="md:btn">About</span></NavLink>
