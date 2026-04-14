@@ -14,6 +14,7 @@ const NavBar = () => {
                         <NavLink><span className="md:btn">Home</span></NavLink>
                         <NavLink><span className="md:btn">Listed Books</span></NavLink>
                         <NavLink><span className="md:btn">Pages to Read</span></NavLink>
+                        <NavLink><span className="md:btn">About</span></NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-2xl md:text-4xl">Boi Poka</a>
@@ -23,6 +24,7 @@ const NavBar = () => {
                     <NavLink><span className="md:btn">Home</span></NavLink>
                     <NavLink><span className="md:btn">Listed Books</span></NavLink>
                     <NavLink><span className="md:btn">Pages to Read</span></NavLink>
+                    <NavLink to='/about'><span className="md:btn">About</span></NavLink>
                 </ul>
             </div>
             <div className="navbar-end md:flex md:gap-2">
