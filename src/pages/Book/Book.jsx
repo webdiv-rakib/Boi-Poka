@@ -3,7 +3,7 @@ import { Link } from "react-router";
 const Book = ({ singleBook }) => {
     // const data = use(bookPromise);
     // console.log(data);
-    const { bookName, author, image, review, totalPages, rating, tags, bookId } = singleBook
+    const { bookName, author, image, rating, tags, bookId } = singleBook
     return (
         <Link to={`/bookDetails/${bookId}`}>
             <div className="card bg-base-100 md:w-96 shadow-sm">
