@@ -1,12 +1,24 @@
-# React + Vite
+# Book Vibe (Boi Poka)
+A modern, responsive web application built for book enthusiasts to explore, discover, and manage their reading lists. The application provides a clean, user-friendly interface to track books you want to read and books you've already finished.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
 
-Currently, two official plugins are available:
+Interactive Book Dashboard: A visually appealing and scannable UI to browse through various books.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Reading List Management: Easily add books to your "Read" list or "Wishlist" and track your reading journey.
 
-## Expanding the ESLint configuration
+Detailed Book Insights: Click on any book to view comprehensive details, including author, page count, publisher, rating, and genre tags.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Seamless Navigation: Integrated custom routing, including a tailored 404 error page for a polished user experience.
+
+Fully Responsive: Optimized layouts that look great on both desktop monitors and mobile screens.
+
+## 🛠️ Technologies Used
+
+Frontend: React.js
+
+Routing: React Router DOM
+
+Styling: Tailwind CSS & DaisyUI
+
+Deployment: Vercel
